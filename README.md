@@ -46,7 +46,7 @@
 
 ## 🎮 如何游玩
 
-1. 打开 [在线游戏](https://littbox.github.io/party_punishment/)。
+1. 打开 [在线游戏](https://littbox.github.io/Truth_or_Dare/)。
 2. 选择 **真心话** 或 **大冒险** 卡片。
 3. 等待卡片翻开，完成题目（不愿回答或挑战时可以跳过）。
 4. 点击 **再抽一张** 继续，或者 **重新选择** 切换类型。
