@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#11101c" />
+  <meta name="description" content="真心话还是大冒险？点击卡片翻开你的派对挑战。" />
+  <title>真心话 or 大冒险 · Party Night</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="./app.js" defer></script>
+  <script src="./game.js" defer></script>
+</head>
+<body>
+  <!-- 保留旧脚本依赖的节点，以兼容原有 200 道题库；这些元素不显示。 -->
+  <div hidden aria-hidden="true"><input id="numberInput"><button id="drawBtn"></button><span id="selectedNumber"></span><span id="generatedNumber"></span><span id="punishmentText"></span><div id="result"></div></div>
+  <main class="app">
+    <header class="hero">
+      <div class="eyebrow"><span class="sparkle">✦</span> THE PARTY STARTS HERE <span class="sparkle">✦</span></div>
+      <h1>真心话 <span class="or">or</span> 大冒险<span class="title-dot">.</span></h1>
+      <p>今晚的故事，从翻开一张卡片开始。</p>
+      <div class="mini-pill">✧ 200 个惊喜挑战 · 随机抽取</div>
+    </header>
+
+    <section id="selection" class="selection" aria-label="选择游戏类型">
+      <button type="button" class="choice truth" data-type="truth" aria-label="抽取真心话">
+        <span class="corner">01 / TRUTH</span>
+        <span class="art" aria-hidden="true">♡</span>
+        <span class="card-title">真心话</span>
+        <span class="card-en">TRUTH</span>
+        <span class="card-cta">来点真心话 <span aria-hidden="true">↗</span></span>
+      </button>
+      <button type="button" class="choice dare" data-type="dare" aria-label="抽取大冒险">
+        <span class="corner">02 / DARE</span>
+        <span class="art" aria-hidden="true">⚡</span>
+        <span class="card-title">大冒险</span>
+        <span class="card-en">DARE</span>
+        <span class="card-cta">挑战一下 <span aria-hidden="true">↗</span></span>
+      </button>
+    </section>
+
+    <section id="drawView" class="draw-view" aria-label="抽取的卡片" hidden>
+      <div id="flipCard" class="flip-card" aria-live="polite">
+        <div class="flip-inner">
+          <div class="flip-face flip-front"><span class="flip-mark">✦</span><span class="flip-front-title">命运卡片</span><span class="flip-hint">正在揭晓...</span></div>
+          <div class="flip-face flip-back">
+            <span id="resultType" class="result-type"></span>
+            <span id="question" class="question"></span>
+            <span id="questionIndex" class="question-index"></span>
+          </div>
+        </div>
+      </div>
+      <div class="actions"><button id="againBtn" type="button" class="primary-action">↻ 再抽一张</button><button id="backBtn" type="button" class="secondary-action">← 重新选择</button></div>
+    </section>
+    <footer>NO PRESSURE · JUST GOOD VIBES <span>✳</span> 只玩让大家都舒服的挑战</footer>
+  </main>
+</body>
+</html>
