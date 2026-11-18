@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎴 Party Punishment
+# 🎴 Truth or Dare
 
 ### 真心话 or 大冒险
 
